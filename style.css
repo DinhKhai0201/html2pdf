@@ -1,0 +1,138 @@
+
+@page {
+	size: A4;
+	margin: 0;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 210mm;
+	height: 297mm;
+	font-size: 100%;    
+	color: #4d3928;
+	background-color: #fff;
+}
+
+.content {
+	padding: 0 .6cm;
+	background-color: #fff;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ccc;
+	height: 90px;
+	width: 100%;
+	padding: 1rem;
+
+	> .logoPQ {
+
+	}
+
+	> .logoBranding {
+
+	}
+}
+
+.areaContent {
+	
+	>.areaTitle {
+		width: 100%;
+		flex: 1 0 100%;
+		padding: 0 0 10px;
+	}
+
+	>.areaDescription {
+		flex: 1;
+	}
+
+	>.areaImage {
+		
+		flex: 1;
+		
+		> div {
+			margin: 5px;
+			background-color: #fff;
+		}
+	}
+}
+
+
+%area {
+	display: flex;
+	padding: 20px;
+	height: 220px;
+	margin: 20px 0;
+
+}
+
+.areaRegister {
+	background-color: #92A3B8;
+	@extend %area;
+}
+
+.areaProduct {
+	background-color: #5FC8D7;
+	@extend %area;
+}
+
+.areaPacking {
+	background-color: #F16651;
+	@extend %area;
+}
+
+.areaTransport {
+	background-color: #FF9100;
+	@extend %area;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ccc;
+	font-size: 11px;
+	padding: 20px;
+	margin-top: 15px;
+	width: 100%;
+
+	> span {
+		font-size: 12px;
+		font-weight: 800;
+	}
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border:3px solid red;
+
+}
+
+.container::before,
+.container::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: .8cm;
+	bottom: 0;
+	width: .1cm;
+
+}
+
+.container::after {
+	left: auto;
+	right: .8cm;
+}
+.html2canvas-container {
+	display: block;
+}
